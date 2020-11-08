@@ -12,6 +12,11 @@ void sum() {
 int main() {
 	scanf("%d", &a);
 	sum();
-	printf("\n\n\n| have %d and * have %d\n", (j-1)*a,i-1);
+	if (a <= 0) {
+		printf("\n\n\n| have 0 and * have 0\n");
+	}
+	else {
+		printf("\n\n\n| have %d and * have %d\n", (j - 1) * a, i - 1);
+	}
 }
 
