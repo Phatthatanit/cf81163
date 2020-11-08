@@ -1,17 +1,18 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-int a,i,j;
-void sum() {
-	for (i = 1; i <= a; i++) {
-		for (j = 1; j <= a; j++) {
+int i,j;
+void sum(int* a) {
+	for (i = 1; i <= *a; i++) {
+		for (j = 1; j <= *a; j++) {
 			printf("|");
 		}
 		printf("*");
 	}
 }
 int main() {
+	int a;
 	scanf("%d", &a);
-	sum();
+	sum(&a);
 	if (a <= 0) {
 		printf("\n\n\n| have 0 and * have 0\n");
 	}
