@@ -1,9 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-int i,j;
+int i[2];
 void sum(int* a) {
-	for (i = 1; i <= *a; i++) {
-		for (j = 1; j <= *a; j++) {
+	for (i[1] = 1; i[1] <= *a; i[1] ++) {
+		for (i[2] = 1; i[2] <= *a; i[2] ++) {
 			printf("|");
 		}
 		printf("*");
@@ -17,7 +17,7 @@ int main() {
 		printf("\n\n\n| have 0 and * have 0\n");
 	}
 	else {
-		printf("\n\n\n| have %d and * have %d\n", (j - 1) * a, i - 1);
+		printf("\n\n\n| have %d and * have %d\n", (i[2] - 1) * a, i[1] - 1);
 	}
 }
 
